@@ -247,7 +247,6 @@ hr {
 .grid {
   padding: 0.25em;
   color: #222;
-  background-color: rgba(0, 0, 0, 0.125);
   border: 1px solid rgba(0, 0, 0, 0.2); }
   .grid h1 {
     margin-right: 0.25em;
