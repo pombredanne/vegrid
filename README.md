@@ -1,10 +1,8 @@
 # Fluid Sassy - Grid System
 
-## A CSS grid system by Adonis K. using SASS
+## A CSS grid system by Adonis K. using SASS:
 
-### TODO: A lot...
-
-## How to use
+## How to use:
 
 __load the grid system__:
 
@@ -20,7 +18,7 @@ __create class units for 4 columns__:
 
 __this results in__:
 
-``css
+```css
 	.col-1-4 {
 	width: 25%;
 }
@@ -34,7 +32,11 @@ __this results in__:
 }
 ```
 
-TODO, until then check the example folder and it's content.
+	#TODO, until then check the example folder and it's content.
+
+## Requirements:
+
+	#TODO
 
 ## Credits
 
