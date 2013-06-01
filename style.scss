@@ -1,16 +1,15 @@
 @import "../lib/_grid";
 
-/* *******************************************
-// Examples:
-******************************************* */
-@for $i from 1 through 12{
+$N: 12;
+
+@for $i from 1 through $N{
 	@include col($i);
 }
 
 /* PAGE STYLING */
 
 body{
-	background-color: #eee;
+	background-color: #555;
 }
 
 #wrapper{
@@ -19,25 +18,46 @@ body{
 }
 
 hr{
-	border-top: 3px dashed rgba(black, 0.2);
-	border-bottom: none;
+	border-top: 2px dashed rgba(white, 0.2);
+	border-bottom: 2px dashed rgba(white, 0.2);
 	border-left: none;
 	border-right: none;
 }
 
 .grid{
-	padding: 1em;
-	color: #fff;
-	background-color: rgba(black, 0.1);
-	border: 1px solid rgba(black, 0.1);
-	
-	.mod{
-		margin-right: 1em;
-		padding: 1em;
-		background-color: rgba(black, 0.5);
+	padding: 0.25em;
+	color: #222;
+	background-color: rgba(white, 0.25);
+	border: 1px solid rgba(white, 0.2);
+
+	h1{
+		margin-right: 0.25em;
+		padding: 0.25em;
+		text-align: center;
+		border: 1px solid rgba(white, 0.25);
+		box-shadow: 0 0 2em rgba(white, 0.3) inset;
 	}
 	
-	& [class|=col]:last-child .mod{
-			margin-right: 0;
+	& [class|=col]:last-child > .item > h1{
+		margin-right: 0;
+	}
+}
+
+h1{
+	margin: 0;
+
+	a{
+		&,
+		&:visited,
+		&:link{
+			font-size: 2em;
+			color: #222;
+			text-decoration: none;
 		}
+
+		&:hover,
+		&:focus{
+			text-decoration: underline;
+		}
+	}
 }
