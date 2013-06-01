@@ -1,6 +1,6 @@
 # Fluid Sassy - Grid System
 
-## A CSS grid system by Adonis K. using SASS:
+## A CSS grid system by Adonis K. using SASS
 
 ## How to use:
 
@@ -19,7 +19,7 @@ __create class units for 4 columns__:
 __this results in__:
 
 ```css
-	.col-1-4 {
+.col-1-4 {
 	width: 25%;
 }
 
@@ -38,7 +38,7 @@ __this results in__:
 
 	#TODO
 
-## Credits
+## Credits:
 
 * Chris Coyier for inspiring me with his podcast
 * The SASS team & community
