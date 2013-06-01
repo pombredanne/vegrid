@@ -1,8 +1,6 @@
 # Fluid Sassy - Grid System
 
-===========
-
-## An CSS grid system by Adonis K. using the SASS preprocessor
+## A CSS grid system by Adonis K. using the SASS preprocessor
 
 ### TODO: A lot...
 
