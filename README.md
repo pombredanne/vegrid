@@ -6,26 +6,35 @@
 
 ## How to use
 
-* TODO, until then check the example folder and it's content.
+__load the grid system__:
 
-*
 ```scss
-// load the grid system
 @import "../lib/_grid";
-// create class units for 4 columns
-@include col(4);
-
-	/* Result:
-	.col-1-4 {
-		width: 25%; }
-
-	.col-2-4 {
-		width: 50%; }
-
-	.col-3-4 {
-		width: 75%; }
-	*/
 ```
+
+__create class units for 4 columns__:
+
+```scss
+@include col(4);
+```
+
+__this results in__:
+
+``css
+	.col-1-4 {
+	width: 25%;
+}
+
+.col-2-4 {
+	width: 50%;
+}
+
+.col-3-4 {
+	width: 75%;
+}
+```
+
+TODO, until then check the example folder and it's content.
 
 ## Credits
 
