@@ -32,6 +32,47 @@ __this results in__:
 }
 ```
 
+__which you can later use as following__:
+
+```html
+<div class="grid">
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-2-4">
+		<h1>Column 2/4</h1>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="col-1-4">
+		<h1>Column 1/4</h1>
+	</div>
+	<div class="col-3-4">
+		<h1>Column 3/4</h1>
+	</div>
+</div>
+```
+
+
 	#TODO, until then check the example folder and it's content.
 
 ## Requirements:
