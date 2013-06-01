@@ -21,26 +21,12 @@
 }
 
 // include clearfix dependancy as a mixin
+// more about clearfix in http://css-tricks.com/snippets/css/clear-fix/
 @mixin clearfix{
 	&:after {
-		content: ".";
-		display: block;
+		display: table;
+		content: " ";
 		clear: both;
-		visibility: hidden;
-		line-height: 0;
-		height: 0;
-	}
-
-	& {
-		display: inline-block;
-	}
-
-	html[xmlns] & {
-		display: block;
-	}
-
-	* html & {
-		height: 1%;
 	}
 }
 
