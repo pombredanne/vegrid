@@ -72,6 +72,15 @@ __which you can later use as following__:
 </div>
 ```
 
+__For a complete N unit grid system, you can use this__:
+```scss
+@import "../lib/_grid";
+
+$N : 12;  //(for example N = 12)
+@for $i from 1 through $N{
+	@include col($i);
+}
+```
 
 	#TODO, add more examples and easier to understand explanations
 
