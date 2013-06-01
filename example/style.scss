@@ -9,7 +9,7 @@ $N: 12;
 /* PAGE STYLING */
 
 body{
-	background-color: #555;
+	background-color: #fff;
 }
 
 #wrapper{
@@ -18,8 +18,8 @@ body{
 }
 
 hr{
-	border-top: 2px dashed rgba(white, 0.2);
-	border-bottom: 2px dashed rgba(white, 0.2);
+	border-top: 2px dashed rgba(black, 0.2);
+	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
 	border-right: none;
 }
@@ -27,15 +27,15 @@ hr{
 .grid{
 	padding: 0.25em;
 	color: #222;
-	background-color: rgba(white, 0.25);
-	border: 1px solid rgba(white, 0.2);
+	background-color: rgba(black, 0.125);
+	border: 1px solid rgba(black, 0.2);
 
 	h1{
 		margin-right: 0.25em;
 		padding: 0.25em;
 		text-align: center;
-		border: 1px solid rgba(white, 0.25);
-		box-shadow: 0 0 2em rgba(white, 0.3) inset;
+		border: 1px solid rgba(black, 0.25);
+		box-shadow: 0 0 2em rgba(black, 0.15) inset;
 	}
 	
 	& [class|=col]:last-child > .item > h1{
