@@ -10,7 +10,7 @@ __load the grid system__:
 @import "../lib/_grid";
 ```
 
-__create class units for 4 columns__:
+__create the class units you need, for example for 4 columns__:
 
 ```scss
 @include col(4);
