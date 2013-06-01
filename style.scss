@@ -8,6 +8,13 @@ $N: 12;
 
 /* PAGE STYLING */
 
+// vendor prefixes for box-shadow
+@mixin box-shadow($values...){
+	-webkit-box-shadow: $values;
+	-moz-box-shadow: $values;
+	box-shadow: $values;
+}
+
 body{
 	background-color: #fff;
 }
@@ -35,7 +42,7 @@ hr{
 		padding: 0.25em;
 		text-align: center;
 		border: 1px solid rgba(black, 0.25);
-		box-shadow: 0 0 2em rgba(black, 0.15) inset;
+		@include box-shadow(0 0 2em rgba(black, 0.15) inset);
 	}
 	
 	& [class|=col]:last-child > .item > h1{
