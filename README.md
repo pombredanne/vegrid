@@ -73,7 +73,7 @@ __which you can later use as following__:
 ```
 
 
-	#TODO, until then check the example folder and it's content.
+	#TODO, add more examples and easier to understand explanations
 
 ## Requirements:
 
