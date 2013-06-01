@@ -1,4 +1,14 @@
-fluid-sassy
+# Fluid Sassy - Grid System
+
 ===========
 
-Fluid Sassy - Grid System
+## An CSS grid system by Adonis K. using the SASS preprocessor
+
+### TODO: A lot...
+
+## How to use
+
+## Credits
+
+* Chris Coyier for inspiring me with his podcast
+* The SASS team & community

@@ -2,16 +2,6 @@
 "Fluid Sassy" Grid System by Adonis K.
 ******************************************* */
 
-.grid{
-	margin: 0;
-	padding: 0;
-}
-
-[class|=col]{
-	box-sizing: border-box;
-	float: left;
-}
-
 /* this mixin generates column units by using a divisor. It starts looping from 1 (and increasing by 1) until it reaches the divisor's number. */
 @mixin col($divisor){
 	$a : 1;
@@ -28,4 +18,39 @@
 			width: percentage(($a * $i) / $b);
 		}
 	}
+}
+
+/* include clearfix dependancy as a mixin */
+@mixin clearfix{
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+
+	& {
+		display: inline-block;
+	}
+
+	html[xmlns] & {
+		display: block;
+	}
+
+	* html & {
+		height: 1%;
+	}
+}
+
+.grid{
+	margin: 0;
+	padding: 0;
+	@include clearfix;
+}
+
+[class|=col]{
+	box-sizing: border-box;
+	float: left;
 }
