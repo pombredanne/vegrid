@@ -34,7 +34,6 @@ hr{
 .grid{
 	padding: 0.25em;
 	color: #222;
-	background-color: rgba(black, 0.125);
 	border: 1px solid rgba(black, 0.2);
 
 	h1{
@@ -45,7 +44,7 @@ hr{
 		@include box-shadow(0 0 2em rgba(black, 0.15) inset);
 	}
 	
-	& [class|=col]:last-child > .item > h1{
+	&  [class|=col]:last-child > .item > h1{
 		margin-right: 0;
 	}
 }
