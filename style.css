@@ -10,18 +10,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .grid:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0; }
-  .grid {
-    display: inline-block; }
-  html[xmlns] .grid {
-    display: block; }
-  * html .grid {
-    height: 1%; }
+    display: table;
+    content: " ";
+    clear: both; }
 
 [class|=col] {
   float: left;
