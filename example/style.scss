@@ -17,11 +17,13 @@ $N: 12;
 
 body{
 	background-color: #fff;
+	font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
 
 #wrapper{
 	max-width: 1140px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 hr{
@@ -34,18 +36,17 @@ hr{
 .grid{
 	padding: 0.25em;
 	color: #222;
-	border: 1px solid rgba(black, 0.2);
 
-	h1{
-		margin-right: 0.25em;
+	.item{
 		padding: 0.25em;
-		text-align: center;
+		background-color: rgba(white, 0.9);
 		border: 1px solid rgba(black, 0.25);
-		@include box-shadow(0 0 2em rgba(black, 0.15) inset);
-	}
-	
-	&  [class|=col]:last-child > .item > h1{
-		margin-right: 0;
+
+		h1{
+			padding: 0.25em;
+			border: 1px solid rgba(black, 0.25);
+			@include box-shadow(0 0 2em rgba(black, 0.15) inset);
+		}
 	}
 }
 
@@ -59,10 +60,12 @@ h1{
 			font-size: 2em;
 			color: #222;
 			text-decoration: none;
+			font-variant: normal;
 		}
 
 		&:hover,
 		&:focus{
+			font-variant: small-caps;
 			text-decoration: underline;
 		}
 	}

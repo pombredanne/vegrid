@@ -223,11 +223,13 @@
 
 /* PAGE STYLING */
 body {
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif; }
 
 #wrapper {
   max-width: 1140px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 hr {
   border-top: 2px dashed rgba(0, 0, 0, 0.2);
@@ -237,24 +239,25 @@ hr {
 
 .grid {
   padding: 0.25em;
-  color: #222;
-  border: 1px solid rgba(0, 0, 0, 0.2); }
-  .grid h1 {
-    margin-right: 0.25em;
+  color: #222; }
+  .grid .item {
     padding: 0.25em;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
-    -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset; }
-  .grid [class|=col]:last-child > .item > h1 {
-    margin-right: 0; }
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.25); }
+    .grid .item h1 {
+      padding: 0.25em;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
+      -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
+      box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset; }
 
 h1 {
   margin: 0; }
   h1 a, h1 a:visited, h1 a:link {
     font-size: 2em;
     color: #222;
-    text-decoration: none; }
+    text-decoration: none;
+    font-variant: normal; }
   h1 a:hover, h1 a:focus {
+    font-variant: small-caps;
     text-decoration: underline; }
