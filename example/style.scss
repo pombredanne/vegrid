@@ -9,21 +9,27 @@
 
 /* PAGE STYLING */
 
+body{
+	background-color: #eee;
+}
+
 #wrapper{
 	max-width: 1140px;
 	margin: 0 auto;
 }
 
 hr{
-	border-top: 3px dashed rgba(black, 0.5);
+	border-top: 3px dashed rgba(black, 0.2);
 	border-bottom: none;
+	border-left: none;
+	border-right: none;
 }
 
 .grid{
 	padding: 1em;
 	color: #fff;
-	background-color: rgba(black, 0.5);
-	border: 1px solid rgba(black, 0.5);
+	background-color: rgba(black, 0.1);
+	border: 1px solid rgba(black, 0.1);
 	
 	.mod{
 		margin-right: 1em;
