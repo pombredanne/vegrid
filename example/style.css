@@ -297,7 +297,7 @@ hr {
 .grid {
   color: #222; }
   .grid .item {
-    padding: 0.25em;
+    padding: 1em 0.25em;
     background-color: #f6f6f6;
     outline: 1px solid rgba(0, 0, 0, 0.25); }
 
