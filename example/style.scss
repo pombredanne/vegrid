@@ -1,7 +1,7 @@
 /* GRID USAGE */
 
 @import "../lib/_grid";
-@include grid(12);
+@include grid(12, 0.5em);
 
 /* PAGE STYLING */
 
@@ -88,11 +88,7 @@ hr{
 	.item{
 		padding: 0.25em;
 		background-color: #f6f6f6;
-		border: 1px solid rgba(black, 0.25);
-	}
-
-	[class|=col]{
-		margin-bottom: 0.5em;
+		outline: 1px solid rgba(black, 0.25);
 	}
 }
 
