@@ -1,23 +1,35 @@
+/* GRID USAGE */
+
 @import "../lib/_grid";
-
-$N: 12;
-
-@for $i from 1 through $N{
-	@include col($i);
-}
+@include grid(12);
 
 /* PAGE STYLING */
 
-// vendor prefixes for box-shadow
-@mixin box-shadow($values...){
-	-webkit-box-shadow: $values;
-	-moz-box-shadow: $values;
-	box-shadow: $values;
+@font-face {
+	font-family: 'UbuntuRegular';
+	src: url('fonts/Ubuntu-R-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UbuntuBold';
+	src: url('fonts/Ubuntu-B-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+	-webkit-transition: all 150ms;
+	-moz-transition: all 150ms;
+	-ms-transition: all 150ms;
+	-o-transition: all 150ms;
+	transition: all 150ms;
 }
 
 body{
 	background-color: #fff;
-	font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+	font-family: 'UbuntuRegular', Arial, sans-serif;
 }
 
 #wrapper{
@@ -27,6 +39,8 @@ body{
 }
 
 hr{
+	margin-top: 0;
+	margin-bottom: 0.5em;
 	border-top: 2px dashed rgba(black, 0.2);
 	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
@@ -34,39 +48,37 @@ hr{
 }
 
 .grid{
-	padding: 0.25em;
 	color: #222;
 
 	.item{
 		padding: 0.25em;
-		background-color: rgba(white, 0.9);
+		background-color: #f6f6f6;
 		border: 1px solid rgba(black, 0.25);
+	}
 
-		h1{
-			padding: 0.25em;
-			border: 1px solid rgba(black, 0.25);
-			@include box-shadow(0 0 2em rgba(black, 0.15) inset);
-		}
+	[class|=col]{
+		margin-bottom: 0.5em;
 	}
 }
 
 h1{
 	margin: 0;
+	padding: 0.5em 0;
+	font-family: 'UbuntuBold', Arial, sans-serif;
 
 	a{
 		&,
 		&:visited,
 		&:link{
-			font-size: 2em;
 			color: #222;
+			text-shadow: 0 2px 2px #999;
 			text-decoration: none;
-			font-variant: normal;
 		}
 
 		&:hover,
 		&:focus{
-			font-variant: small-caps;
 			text-decoration: underline;
+			text-shadow: 0 6px 24px #999;
 		}
 	}
 }

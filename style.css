@@ -1,25 +1,7 @@
+/* GRID USAGE */
 /* *******************************************
 "Fluid Sassy" Grid System by Adonis K.
 ******************************************* */
-.grid {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  .grid:after {
-    display: table;
-    content: " ";
-    clear: both; }
-
-[class|=col] {
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .col-1-1 {
   width: 100%; }
 
@@ -221,10 +203,48 @@
 .col-11-12 {
   width: 91.66667%; }
 
+.grid {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .grid:after {
+    display: table;
+    content: " ";
+    clear: both; }
+
+[class|=col] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /* PAGE STYLING */
+@font-face {
+  font-family: 'UbuntuRegular';
+  src: url("fonts/Ubuntu-R-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UbuntuBold';
+  src: url("fonts/Ubuntu-B-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-transition: all 150ms;
+  -moz-transition: all 150ms;
+  -ms-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms; }
+
 body {
   background-color: #fff;
-  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif; }
+  font-family: 'UbuntuRegular', Arial, sans-serif; }
 
 #wrapper {
   max-width: 1140px;
@@ -232,32 +252,30 @@ body {
   text-align: center; }
 
 hr {
+  margin-top: 0;
+  margin-bottom: 0.5em;
   border-top: 2px dashed rgba(0, 0, 0, 0.2);
   border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   border-left: none;
   border-right: none; }
 
 .grid {
-  padding: 0.25em;
   color: #222; }
   .grid .item {
     padding: 0.25em;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #f6f6f6;
     border: 1px solid rgba(0, 0, 0, 0.25); }
-    .grid .item h1 {
-      padding: 0.25em;
-      border: 1px solid rgba(0, 0, 0, 0.25);
-      -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
-      -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset;
-      box-shadow: 0 0 2em rgba(0, 0, 0, 0.15) inset; }
+  .grid [class|=col] {
+    margin-bottom: 0.5em; }
 
 h1 {
-  margin: 0; }
+  margin: 0;
+  padding: 0.5em 0;
+  font-family: 'UbuntuBold', Arial, sans-serif; }
   h1 a, h1 a:visited, h1 a:link {
-    font-size: 2em;
     color: #222;
-    text-decoration: none;
-    font-variant: normal; }
+    text-shadow: 0 2px 2px #999;
+    text-decoration: none; }
   h1 a:hover, h1 a:focus {
-    font-variant: small-caps;
-    text-decoration: underline; }
+    text-decoration: underline;
+    text-shadow: 0 6px 24px #999; }
