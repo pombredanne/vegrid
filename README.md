@@ -10,7 +10,7 @@ __load the grid system__:
 @import "../lib/_grid";
 ```
 
-__create the grid you need (for example, a 4 column grid):
+__create the grid you need (for example, a 4 column grid)__:
 
 ```scss
 @include grid(4);
