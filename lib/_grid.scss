@@ -36,7 +36,7 @@
 	box-sizing: border-box;
 }
 
-@mixin grid($N : false, $padding : false){
+@mixin grid($N : false, $padding : 0){
 	// if no $N was selected, create classic 12 column grid
 	@if($N){
 		$N : 12;
@@ -49,8 +49,7 @@
 
 	.grid{
 		display: block;
-		width: 100%;
-		margin: 0 0 $padding 0;
+		margin: 0 0 $padding $padding;
 		@include borderbox;
 		@include clearfix;
 	}
@@ -58,11 +57,11 @@
 	[class|=col]{
 		float: left;
 
-		padding-right: $padding;
+		@if($padding != 0){
+			padding-right: $padding;
 
-		@if($padding != false){
 			&:last-child{
-				padding-right: 0;
+				padding-right: $padding;
 			}
 		}
 

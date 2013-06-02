@@ -205,8 +205,7 @@
 
 .grid {
   display: block;
-  width: 100%;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 1em 1em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -217,12 +216,12 @@
 
 [class|=col] {
   float: left;
-  padding-right: 0.5em;
+  padding-right: 1em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   [class|=col]:last-child {
-    padding-right: 0; }
+    padding-right: 1em; }
 
 /* PAGE STYLING */
 @font-face {
@@ -273,18 +272,23 @@ button {
 body {
   overflow-x: auto;
   overflow-y: scroll;
-  background-color: #fff;
+  background-color: #f5f5f5;
   font-family: 'UbuntuRegular', Arial, sans-serif; }
 
 #wrapper {
   position: relative;
   width: 70%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  background-color: #fff;
+  border-top: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
 
 hr {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   border-top: 2px dashed rgba(0, 0, 0, 0.2);
   border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   border-left: none;
@@ -302,7 +306,7 @@ h2,
 .details,
 .code {
   margin: 0;
-  padding: 0.5em 0;
+  padding: 1em 0;
   font-family: 'UbuntuBold', Arial, sans-serif; }
   h1 a, h1 a:visited, h1 a:link,
   h2 a,
@@ -333,9 +337,9 @@ h2 {
 .code {
   position: absolute;
   top: 1em;
-  right: 0;
+  right: 1em;
   display: inline-block;
-  padding: 0.5em;
+  padding: 1em;
   background-color: #eee;
   border: 1px solid #ccc;
   box-shadow: 0 0 3px #ddd, 0 0 3px #ddd inset; }
@@ -358,7 +362,8 @@ h2 {
   font-size: 2em; }
 
 .code-wrap {
-  text-align: left; }
+  text-align: left;
+  padding: 0 1em; }
 
 .hidden {
   display: none; }
