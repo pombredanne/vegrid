@@ -10,10 +10,10 @@ __load the grid system__:
 @import "../lib/_grid";
 ```
 
-__create the class units you need, for example for 4 columns__:
+__create the grid you need (for example, a 4 column grid):
 
 ```scss
-@include col(4);
+@include grid(4);
 ```
 
 __this results in__:
@@ -70,16 +70,6 @@ __which you can later use as following__:
 		<h1>Column 3/4</h1>
 	</div>
 </div>
-```
-
-__For a complete N unit grid system, you can use this__:
-```scss
-@import "../lib/_grid";
-
-$N : 12;  //(for example N = 12)
-@for $i from 1 through $N{
-	@include col($i);
-}
 ```
 
 	#TODO, add more examples and easier to understand explanations
