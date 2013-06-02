@@ -82,6 +82,13 @@ body{
 	@media only screen and (max-width: 1023px){
 		width: 100%;
 		border: none;
+
+		.code{
+			position: relative;
+			margin-bottom: $padding;
+			top: auto;
+			right: auto;
+		}
 	}
 }
 
@@ -109,22 +116,21 @@ h2,
 .details,
 .code{
 	margin: 0;
-	padding: $padding 0;
+	padding: $padding/2 0;
 	font-family: 'UbuntuBold', Arial, sans-serif;
+	text-shadow: 0 2px 2px #aaa;
 
 	a{
 		&,
 		&:visited,
 		&:link{
 			color: #222;
-			text-shadow: 0 2px 2px #999;
 			text-decoration: none;
 		}
 
 		&:hover,
 		&:focus{
-			text-decoration: underline;
-			text-shadow: 0 6px 24px #999;
+			text-shadow: 0 6px 24px #aaa;
 		}
 	}
 }
@@ -170,7 +176,7 @@ h2{
 	a{
 		display: inline-block;
 		margin-right: 1em;
-		font-size: 2em;
+		font-size: 3em;
 	}
 }
 

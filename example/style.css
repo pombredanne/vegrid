@@ -288,7 +288,12 @@ body {
   @media only screen and (max-width: 1023px) {
     #wrapper {
       width: 100%;
-      border: none; } }
+      border: none; }
+      #wrapper .code {
+        position: relative;
+        margin-bottom: 1em;
+        top: auto;
+        right: auto; } }
 
 hr {
   margin-top: 1em;
@@ -310,8 +315,9 @@ h2,
 .details,
 .code {
   margin: 0;
-  padding: 1em 0;
-  font-family: 'UbuntuBold', Arial, sans-serif; }
+  padding: 0.5em 0;
+  font-family: 'UbuntuBold', Arial, sans-serif;
+  text-shadow: 0 2px 2px #aaa; }
   h1 a, h1 a:visited, h1 a:link,
   h2 a,
   h2 a:visited,
@@ -323,7 +329,6 @@ h2,
   .code a:visited,
   .code a:link {
     color: #222;
-    text-shadow: 0 2px 2px #999;
     text-decoration: none; }
   h1 a:hover, h1 a:focus,
   h2 a:hover,
@@ -332,8 +337,7 @@ h2,
   .details a:focus,
   .code a:hover,
   .code a:focus {
-    text-decoration: underline;
-    text-shadow: 0 6px 24px #999; }
+    text-shadow: 0 6px 24px #aaa; }
 
 h2 {
   font-size: 1em; }
@@ -363,7 +367,7 @@ h2 {
 .details a {
   display: inline-block;
   margin-right: 1em;
-  font-size: 2em; }
+  font-size: 3em; }
 
 .code-wrap {
   text-align: left;
