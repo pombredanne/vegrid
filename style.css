@@ -235,7 +235,33 @@
   font-weight: normal;
   font-style: normal; }
 
-* {
+@font-face {
+  font-family: 'icons';
+  src: url("fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon-download, .icon-github, .icon-code {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-download:before {
+  content: "\e001"; }
+
+.icon-github:before {
+  content: "\e000"; }
+
+.icon-code:before {
+  content: "\e003"; }
+
+a,
+button {
   -webkit-transition: all 150ms;
   -moz-transition: all 150ms;
   -ms-transition: all 150ms;
@@ -243,10 +269,13 @@
   transition: all 150ms; }
 
 body {
+  overflow-x: auto;
+  overflow-y: scroll;
   background-color: #fff;
   font-family: 'UbuntuRegular', Arial, sans-serif; }
 
 #wrapper {
+  position: relative;
   max-width: 1140px;
   margin: 0 auto;
   text-align: center; }
@@ -268,14 +297,68 @@ hr {
   .grid [class|=col] {
     margin-bottom: 0.5em; }
 
-h1 {
+h1,
+h2,
+.details,
+.code {
   margin: 0;
   padding: 0.5em 0;
   font-family: 'UbuntuBold', Arial, sans-serif; }
-  h1 a, h1 a:visited, h1 a:link {
+  h1 a, h1 a:visited, h1 a:link,
+  h2 a,
+  h2 a:visited,
+  h2 a:link,
+  .details a,
+  .details a:visited,
+  .details a:link,
+  .code a,
+  .code a:visited,
+  .code a:link {
     color: #222;
     text-shadow: 0 2px 2px #999;
     text-decoration: none; }
-  h1 a:hover, h1 a:focus {
+  h1 a:hover, h1 a:focus,
+  h2 a:hover,
+  h2 a:focus,
+  .details a:hover,
+  .details a:focus,
+  .code a:hover,
+  .code a:focus {
     text-decoration: underline;
     text-shadow: 0 6px 24px #999; }
+
+h2 {
+  font-size: 1em; }
+
+.code {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  display: inline-block;
+  padding: 0.5em;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 3px #ddd, 0 0 3px #ddd inset; }
+  .code .enabled {
+    background-color: #000;
+    border: 1px solid #222;
+    box-shadow: 0 0 3px #111, 0 0 3px #111 inset; }
+    .code .enabled i {
+      color: #fff; }
+    .code .enabled:hover i {
+      color: #222; }
+  .code:hover {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px #eee, 0 0 3px #eee inset; }
+
+.details a {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 2em; }
+
+.code-wrap {
+  text-align: left; }
+
+.hidden {
+  display: none; }
