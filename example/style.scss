@@ -5,6 +5,34 @@ $padding: 1em;
 
 @include grid(12, $padding);
 
+@mixin transition($values...){
+	-webkit-transition: $values;
+	-moz-transition: $values;
+	-ms-transition: $values;
+	-o-transition: $values;
+	transition: $values;
+}
+
+@mixin border-radius($values...){
+	-webkit-border-radius: $values;
+	-moz-border-radius: $values;
+	border-radius: $values;
+}
+
+@mixin box-shadow($values...){
+	-webkit-box-shadow: $values;
+	-moz-box-shadow: $values;
+	box-shadow: $values;
+}
+
+@mixin text-shadow($values...){
+	-webkit-text-shadow: $values;
+	-moz-text-shadow: $values;
+	-ms-text-shadow: $values;
+	-o-text-shadow: $values;
+	text-shadow: $values;
+}
+
 /* PAGE STYLING */
 
 
@@ -54,18 +82,14 @@ $padding: 1em;
 // everything else
 a,
 button{
-	-webkit-transition: all 150ms;
-	-moz-transition: all 150ms;
-	-ms-transition: all 150ms;
-	-o-transition: all 150ms;
-	transition: all 150ms;
+	@include transition(all 150ms);
 }
 
 body{
 	overflow-x: auto;
 	overflow-y: scroll;
-	background-color: #f5f5f5;
 	font-family: 'UbuntuRegular', Arial, sans-serif;
+	background-color: #f5f5f5;
 }
 
 #wrapper{
@@ -75,10 +99,11 @@ body{
 	text-align: center;
 	background-color: #fff;
 	border-top: none;
-	border-bottom: 1px solid rgba(black, 0.2);
-	border-left: 1px solid rgba(black, 0.2);
-	border-right: 1px solid rgba(black, 0.2);
+	border-bottom: 3px solid rgba(black, 0.2);
+	border-left: 3px solid rgba(black, 0.2);
+	border-right: 3px solid rgba(black, 0.2);
 	@include borderbox;
+	@include border-radius(0 0 5px 5px);
 
 	@media only screen and (max-width: 1023px){
 		width: 100%;
@@ -86,9 +111,9 @@ body{
 
 		.code{
 			position: relative;
-			margin-bottom: $padding;
 			top: auto;
 			right: auto;
+			margin-bottom: $padding;
 		}
 	}
 }
@@ -119,7 +144,7 @@ h2,
 	margin: 0;
 	padding: $padding/2 0;
 	font-family: 'UbuntuBold', Arial, sans-serif;
-	text-shadow: 0 2px 2px #aaa;
+	@include text-shadow(0 2px 2px #aaa);
 
 	a{
 		&,
@@ -131,7 +156,7 @@ h2,
 
 		&:hover,
 		&:focus{
-			text-shadow: 0 6px 24px #aaa;
+			@include text-shadow(0 6px 24px #aaa);
 		}
 	}
 }
@@ -148,12 +173,12 @@ h2{
 	padding: $padding;
 	background-color: #eee;
 	border: 1px solid #ccc;
-	box-shadow: 0 0 3px #ddd, 0 0 3px #ddd inset;
+	@include box-shadow(0 0 3px #ddd, 0 0 3px #ddd inset);
 
 	.enabled{
 		background-color: #000;
 		border: 1px solid #222;
-		box-shadow: 0 0 3px #111, 0 0 3px #111 inset;
+		@include box-shadow(0 0 3px #111, 0 0 3px #111 inset);
 
 		i{
 			color: #fff;
@@ -169,7 +194,7 @@ h2{
 	&:hover{
 		background-color: #fff;
 		border: 1px solid #ddd;
-		box-shadow: 0 0 3px #eee, 0 0 3px #eee inset;
+		@include box-shadow(0 0 3px #eee, 0 0 3px #eee inset);
 	}
 }
 
