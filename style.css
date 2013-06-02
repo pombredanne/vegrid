@@ -285,6 +285,10 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 1023px) {
+    #wrapper {
+      width: 100%;
+      border: none; } }
 
 hr {
   margin-top: 1em;
