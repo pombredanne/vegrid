@@ -1,5 +1,7 @@
+/* GRID USAGE */
+
 @import "../lib/_grid";
-@include grid;
+@include grid(12);
 
 /* PAGE STYLING */
 
@@ -17,6 +19,14 @@
 	font-style: normal;
 }
 
+*{
+	-webkit-transition: all 150ms;
+	-moz-transition: all 150ms;
+	-ms-transition: all 150ms;
+	-o-transition: all 150ms;
+	transition: all 150ms;
+}
+
 body{
 	background-color: #fff;
 	font-family: 'UbuntuRegular', Arial, sans-serif;
@@ -29,6 +39,8 @@ body{
 }
 
 hr{
+	margin-top: 0;
+	margin-bottom: 0.5em;
 	border-top: 2px dashed rgba(black, 0.2);
 	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
@@ -43,23 +55,30 @@ hr{
 		background-color: #f6f6f6;
 		border: 1px solid rgba(black, 0.25);
 	}
+
+	[class|=col]{
+		margin-bottom: 0.5em;
+	}
 }
 
 h1{
-	font-family: 'UbuntuBold', Arial, sans-serif;
 	margin: 0;
+	padding: 0.5em 0;
+	font-family: 'UbuntuBold', Arial, sans-serif;
 
 	a{
 		&,
 		&:visited,
 		&:link{
 			color: #222;
+			text-shadow: 0 2px 2px #999;
 			text-decoration: none;
 		}
 
 		&:hover,
 		&:focus{
 			text-decoration: underline;
+			text-shadow: 0 6px 24px #999;
 		}
 	}
 }
