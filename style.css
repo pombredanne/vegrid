@@ -205,8 +205,8 @@
 
 .grid {
   display: block;
-  padding: 1em 0 1em 1em;
-  margin: 0 0 1em 0;
+  padding: 1em 0 0 1em;
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -215,7 +215,8 @@
     content: " ";
     clear: both; }
   .grid .grid {
-    margin: 0; }
+    margin: 0;
+    padding-bottom: 1em; }
 
 [class|=col] {
   float: left;
@@ -284,6 +285,7 @@ body {
   position: relative;
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 1em;
   text-align: center;
   background-color: #fff;
   border-top: none;
@@ -308,7 +310,7 @@ body {
 
 hr {
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   border-top: 2px dashed rgba(0, 0, 0, 0.2);
   border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   border-left: none;
