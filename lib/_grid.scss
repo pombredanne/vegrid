@@ -49,9 +49,14 @@
 
 	.grid{
 		display: block;
-		margin: 0 0 $padding $padding;
+		padding: 1em 0 1em 1em;
+		margin: 0 0 $padding 0;
 		@include borderbox;
 		@include clearfix;
+
+		.grid{
+			margin: 0;
+		}
 	}
 
 	[class|=col]{

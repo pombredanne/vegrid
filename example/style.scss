@@ -86,6 +86,8 @@ button{
 }
 
 body{
+	color: #222;
+	padding-bottom: 1em;
 	overflow-x: auto;
 	overflow-y: scroll;
 	font-family: 'UbuntuRegular', Arial, sans-serif;
@@ -128,8 +130,6 @@ hr{
 }
 
 .grid{
-	color: #222;
-
 	.item{
 		padding: 0.25em;
 		background-color: #f6f6f6;
@@ -213,4 +213,8 @@ h2{
 
 .hidden{
 	display: none;
+}
+
+.invisible{
+	color: transparent;
 }
