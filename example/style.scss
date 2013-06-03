@@ -122,7 +122,7 @@ body{
 
 hr{
 	margin-top: $padding;
-	margin-bottom: $padding;
+	margin-bottom: 0;
 	border-top: 2px dashed rgba(black, 0.2);
 	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
