@@ -49,13 +49,14 @@
 
 	.grid{
 		display: block;
-		padding: 1em 0 1em 1em;
+		padding: $padding 0 0 $padding;
 		margin: 0 0 $padding 0;
 		@include borderbox;
 		@include clearfix;
 
 		.grid{
 			margin: 0;
+			padding-bottom: $padding;
 		}
 	}
 
