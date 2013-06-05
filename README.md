@@ -1,4 +1,4 @@
-# Fluid Sassy - Grid System
+# veGrid - Grid System
 
 ## A CSS grid system by Adonis K. using SASS
 
