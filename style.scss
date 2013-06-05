@@ -136,9 +136,13 @@ hr{
 
 .grid{
 	.item{
-		padding: 0.25em;
-		background-color: #f6f6f6;
-		outline: 1px solid rgba(black, 0.25);
+		text-align: center;
+		background-color: rgba(black, 0.2);
+		
+		span{
+			display: inline-block;
+			padding: 0.25em 0;
+		}
 	}
 }
 
