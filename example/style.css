@@ -298,6 +298,9 @@ body {
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px; }
+  @media only screen and (min-width: 1024px) {
+    #wrapper {
+      min-width: 1024px; } }
   @media only screen and (max-width: 1023px) {
     #wrapper {
       width: 100%;
