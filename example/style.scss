@@ -98,7 +98,7 @@ body{
 	position: relative;
 	width: 70%;
 	margin: 0 auto;
-	padding-bottom: 1em;
+	padding: 0;
 	text-align: center;
 	background-color: #fff;
 	border-top: none;
@@ -126,8 +126,7 @@ body{
 }
 
 hr{
-	margin-top: $padding;
-	margin-bottom: 0;
+	margin: 0;
 	border-top: 2px dashed rgba(black, 0.2);
 	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
@@ -135,6 +134,12 @@ hr{
 }
 
 .grid{
+	padding-bottom: 0;
+
+	[class|=col]{
+		margin-bottom: $padding;
+	}
+
 	.item{
 		text-align: center;
 		background-color: rgba(black, 0.2);
