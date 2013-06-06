@@ -323,7 +323,7 @@ hr {
 .grid {
   padding-bottom: 0; }
   .grid [class|=col] {
-    margin-bottom: 1em; }
+    padding-bottom: 1em; }
   .grid .item {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.2); }
