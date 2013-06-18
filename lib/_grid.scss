@@ -2,6 +2,11 @@
 "veGrid" Grid System by Adonis K.
 ******************************************* */
 
+/*
+	Requires: borderbox mixin
+	Requires: clearfix mixin
+*/
+
 @import "borderbox";
 @import "clearfix";
 
