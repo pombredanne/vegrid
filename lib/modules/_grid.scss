@@ -1,14 +1,14 @@
 /* *******************************************
-"veGrid" Grid System by Adonis K.
+veGrid - Grid System by Adonis K.
 ******************************************* */
 
-/*
-	Requires: borderbox mixin
-	Requires: clearfix mixin
-*/
+// partial requirements
+//	Requires: borderbox dependency
+//	Requires: clearfix dependency
+//
 
-@import "borderbox";
-@import "clearfix";
+@import "../generic/borderbox";
+@import "../generic/clearfix";
 
 // this mixin generates column units by using a divisor ($N). It starts looping from 1 (and increasing by 1) until it reaches the divisor's number ($N).
 @mixin col($N){
