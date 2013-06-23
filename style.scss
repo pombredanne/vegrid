@@ -1,9 +1,9 @@
 /* GRID USAGE */
 
 @import "../lib/modules/_grid";
-$padding: 1.5%;
+$gutter: 1.5%;
 
-@include grid(12, $padding);
+@include grid(12, $gutter);
 
 @mixin transition($values...){
 	-webkit-transition: $values;
@@ -120,7 +120,7 @@ body{
 			position: relative;
 			top: auto;
 			right: auto;
-			margin-bottom: $padding;
+			margin-bottom: $gutter;
 		}
 	}
 }
@@ -136,8 +136,8 @@ hr{
 .grid{
 	padding-bottom: 0;
 
-	[class|=col]{
-		padding-bottom: $padding;
+	[class^=col]{
+		padding-bottom: $gutter;
 
 		&:hover .item{
 			outline: 1px solid rgba(black, 0.25);
@@ -160,7 +160,7 @@ h2,
 .details,
 .code{
 	margin: 0;
-	padding: $padding/2 0;
+	padding: $gutter/2 0;
 	font-family: 'UbuntuBold', Arial, sans-serif;
 	@include text-shadow(0 2px 2px #aaa);
 
@@ -186,9 +186,9 @@ h2{
 .code{
 	position: absolute;
 	top: 1em;
-	right: $padding;
+	right: $gutter;
 	display: inline-block;
-	padding: $padding;
+	padding: $gutter;
 	background-color: #eee;
 	border: 1px solid #ccc;
 	@include box-shadow(0 0 3px #ddd, 0 0 3px #ddd inset);
@@ -226,7 +226,7 @@ h2{
 
 .code-wrap{
 	text-align: left;
-	padding: 0 $padding;
+	padding: 0 $gutter;
 }
 
 .hidden{

@@ -289,7 +289,7 @@ veGrid - Grid System by Adonis K.
   padding-bottom: 0;
 }
 
-[class*=col] {
+[class^=col] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -297,7 +297,7 @@ veGrid - Grid System by Adonis K.
   float: left;
   padding-right: 1.5%;
 }
-[class*=col]:last-child {
+[class^=col]:last-child {
   padding-right: 1.5%;
 }
 
@@ -411,10 +411,10 @@ hr {
 .grid {
   padding-bottom: 0;
 }
-.grid [class|=col] {
+.grid [class^=col] {
   padding-bottom: 1.5%;
 }
-.grid [class|=col]:hover .item {
+.grid [class^=col]:hover .item {
   outline: 1px solid rgba(0, 0, 0, 0.25);
 }
 .grid .item {
