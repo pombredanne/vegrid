@@ -138,15 +138,11 @@ hr{
 
 	[class^=col]{
 		padding-bottom: $gutter;
-
-		&:hover .item{
-			outline: 1px solid rgba(black, 0.25);
-		}
 	}
 
 	.item{
 		text-align: center;
-		background-color: rgba(black, 0.2);
+		background-color: rgba(black, 0.15);
 		
 		span{
 			display: inline-block;
