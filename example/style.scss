@@ -3,7 +3,12 @@
 @import "../lib/modules/_grid";
 $gutter: 1.5%;
 
+// need a 12 column grid
 @include grid(12, $gutter);
+// need another grid with 3 columns for the inner structure
+@include grid(3, $gutter);
+
+// Mixins
 
 @mixin transition($values...){
 	-webkit-transition: $values;
