@@ -1,4 +1,4 @@
 // import grid module
 @import "../lib/modules/_grid";
-// generate 12-column grid with padding size of 1.5%
+// generate 12-column grid with gutter size of 1.5%
 @include grid(12, 1.5%);

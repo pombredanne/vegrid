@@ -50,7 +50,7 @@ veGrid - Grid System by Adonis K.
 		}
 	}
 
-	[class*=col]{
+	[class ^= col]{
 		@include borderbox;
 		display: block;
 		float: left;
