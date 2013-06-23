@@ -279,7 +279,7 @@ veGrid - Grid System by Adonis K.
   text-align: left;
 }
 .grid:after {
-  display: block;
+  display: table;
   content: " ";
   clear: both;
 }
