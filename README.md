@@ -1,6 +1,8 @@
 # veGrid - Grid System
 
-## A CSS grid system by Adonis K. using SASS
+## About
+
+veGrid is a CSS grid system by [Adonis K.](http://varemenos.com) utilizing the power of SASS (SCSS syntax)
 
 ## How to use:
 
@@ -74,7 +76,7 @@ __which you can later use as following__:
 
 	#TODO, add more examples and easier to understand explanations
 
-## Requirements:
+## Requirements & Support:
 
 	#TODO
 
