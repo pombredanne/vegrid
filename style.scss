@@ -138,6 +138,10 @@ hr{
 
 	[class|=col]{
 		padding-bottom: $padding;
+
+		&:hover .item{
+			outline: 1px solid rgba(black, 0.25);
+		}
 	}
 
 	.item{
