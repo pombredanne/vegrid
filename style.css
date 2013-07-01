@@ -52,8 +52,8 @@ veGrid - Grid System by Adonis K.
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  padding: 1.5% 0 0 1.5%;
   margin: 0;
+  padding: 0;
   text-align: left;
 }
 .grid:before, .grid:after {
@@ -66,12 +66,29 @@ veGrid - Grid System by Adonis K.
 .grid {
   *zoom: 1;
 }
-.grid .grid {
-  margin: 0;
+
+.row {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 1.5%;
+}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row {
+  *zoom: 1;
+}
+.row:last-child {
   padding-bottom: 0;
 }
-
-[class^=col] {
+.row > * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -80,8 +97,19 @@ veGrid - Grid System by Adonis K.
   float: left;
   padding-right: 1.5%;
 }
-[class^=col]:last-child {
-  padding-right: 1.5%;
+.row > *:last-child {
+  padding-right: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .row > * {
+    width: 100%;
+    float: none;
+    padding: 0;
+    padding-bottom: 1.5%;
+  }
+  .row > *:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .col-1-3 {
@@ -98,8 +126,8 @@ veGrid - Grid System by Adonis K.
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  padding: 1.5% 0 0 1.5%;
   margin: 0;
+  padding: 0;
   text-align: left;
 }
 .grid:before, .grid:after {
@@ -112,12 +140,29 @@ veGrid - Grid System by Adonis K.
 .grid {
   *zoom: 1;
 }
-.grid .grid {
-  margin: 0;
+
+.row {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 1.5%;
+}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row {
+  *zoom: 1;
+}
+.row:last-child {
   padding-bottom: 0;
 }
-
-[class^=col] {
+.row > * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -126,8 +171,19 @@ veGrid - Grid System by Adonis K.
   float: left;
   padding-right: 1.5%;
 }
-[class^=col]:last-child {
-  padding-right: 1.5%;
+.row > *:last-child {
+  padding-right: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .row > * {
+    width: 100%;
+    float: none;
+    padding: 0;
+    padding-bottom: 1.5%;
+  }
+  .row > *:last-child {
+    padding-bottom: 0;
+  }
 }
 
 /* PAGE STYLING */
@@ -197,7 +253,7 @@ body {
   position: relative;
   width: 70%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1.5% 1.5% 1.5%;
   text-align: center;
   background-color: #fff;
   border-top: none;
@@ -222,16 +278,11 @@ body {
     width: 100%;
     border: none;
   }
-  #wrapper .code {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-bottom: 1.5%;
-  }
 }
 
 hr {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 1.5%;
   border-top: 2px dashed rgba(0, 0, 0, 0.2);
   border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   border-left: none;
@@ -240,9 +291,6 @@ hr {
 
 .grid {
   padding-bottom: 0;
-}
-.grid [class^=col] {
-  padding-bottom: 1.5%;
 }
 .grid .item {
   text-align: center;
@@ -255,8 +303,7 @@ hr {
 
 h1,
 h2,
-.details,
-.code {
+.details {
   margin: 0;
   padding: 0.75% 0;
   font-family: 'UbuntuBold', Arial, sans-serif;
@@ -272,10 +319,7 @@ h2 a:visited,
 h2 a:link,
 .details a,
 .details a:visited,
-.details a:link,
-.code a,
-.code a:visited,
-.code a:link {
+.details a:link {
   color: #222;
   text-decoration: none;
 }
@@ -283,9 +327,7 @@ h1 a:hover, h1 a:focus,
 h2 a:hover,
 h2 a:focus,
 .details a:hover,
-.details a:focus,
-.code a:hover,
-.code a:focus {
+.details a:focus {
   -webkit-text-shadow: 0 6px 24px #aaaaaa;
   -moz-text-shadow: 0 6px 24px #aaaaaa;
   -ms-text-shadow: 0 6px 24px #aaaaaa;
@@ -297,48 +339,10 @@ h2 {
   font-size: 1em;
 }
 
-.code {
-  position: absolute;
-  top: 1em;
-  right: 1.5%;
-  display: inline-block;
-  padding: 1.5%;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 0 0 3px #dddddd, 0 0 3px #dddddd inset;
-  -moz-box-shadow: 0 0 3px #dddddd, 0 0 3px #dddddd inset;
-  box-shadow: 0 0 3px #dddddd, 0 0 3px #dddddd inset;
-}
-.code .enabled {
-  background-color: #000;
-  border: 1px solid #222;
-  -webkit-box-shadow: 0 0 3px #111111, 0 0 3px #111111 inset;
-  -moz-box-shadow: 0 0 3px #111111, 0 0 3px #111111 inset;
-  box-shadow: 0 0 3px #111111, 0 0 3px #111111 inset;
-}
-.code .enabled i {
-  color: #fff;
-}
-.code .enabled:hover i {
-  color: #222;
-}
-.code:hover {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-box-shadow: 0 0 3px #eeeeee, 0 0 3px #eeeeee inset;
-  -moz-box-shadow: 0 0 3px #eeeeee, 0 0 3px #eeeeee inset;
-  box-shadow: 0 0 3px #eeeeee, 0 0 3px #eeeeee inset;
-}
-
 .details a {
   display: inline-block;
   margin-right: 1em;
   font-size: 3em;
-}
-
-.code-wrap {
-  text-align: left;
-  padding: 0 1.5%;
 }
 
 .hidden {
