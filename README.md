@@ -18,58 +18,20 @@ __create the grid you need (for example, a 4 column grid)__:
 @include grid(4);
 ```
 
-__this results in__:
-
-```css
-.col-1-4 {
-	width: 25%;
-}
-
-.col-2-4 {
-	width: 50%;
-}
-
-.col-3-4 {
-	width: 75%;
-}
-```
-
 __which you can later use as following__:
 
 ```html
 <div class="grid">
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-</div>
-
-<div class="grid">
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-2-4">
-		<h1>Column 2/4</h1>
-	</div>
-</div>
-
-<div class="grid">
-	<div class="col-1-4">
-		<h1>Column 1/4</h1>
-	</div>
-	<div class="col-3-4">
-		<h1>Column 3/4</h1>
+	<div class="row">
+		<div class="col-1-4">
+			<h1>Column 1/4</h1>
+		</div>
+		<div class="col-1-4">
+			<h1>Column 1/4</h1>
+		</div>
+		<div class="col-2-4">
+			<h1>Column 2/4</h1>
+		</div>
 	</div>
 </div>
 ```
